@@ -1,0 +1,107 @@
+<!-- account_deletion_email.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Updated Email</title>
+    <style>
+      .body {
+        width: 100%;
+        font-family: Roboto, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        color: black;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        color: black;
+      }
+      h2 span {
+        color: #1bbdc0;
+      }
+      p {
+        font-size: 15px;
+        line-height: 20px;
+        color: #555555;
+        text-align: center;
+        font-weight: 300;
+      }
+      .reason-container {
+        max-width: 410px;
+        margin: 0 auto 10px;
+      }
+
+      hr {
+        color: #e2e2e2;
+      }
+      .ignore {
+        font-size: 12px;
+        line-height: 20px;
+        color: #555555;
+        text-align: center;
+        font-weight: 300;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      footer {
+        padding: 10px;
+      }
+      footer p {
+        font-size: 14px;
+        margin: 0;
+      }
+      a {
+        color: #1cb1b4;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #1bbdc0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <div class="container">
+        <h1>Welcome to Ahmed Store</h1>
+        <h2>Hello <span><%= name %></span></h2>
+        <div class="reason-container">
+          <p>Your email has changed to: <%= newEmail %></p>
+          <p>
+            If this was not your intention, please contact our support team
+            immediately.
+          </p>
+        </div>
+        <hr />
+        <p class="ignore">
+          You received this email because you changed your email.
+          <span
+            >If you did not initiate this request, please ignore this
+            email.</span
+          >
+        </p>
+
+        <footer>
+          <p>
+            If you have any questions, please don't hesitate to contact us at:
+            <a href="mailto:akzero.supp@gmail.com">akzero.supp@gmail.com</a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

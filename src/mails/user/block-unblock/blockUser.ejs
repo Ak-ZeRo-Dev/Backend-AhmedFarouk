@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Account</title>
+    <style>
+      .body {
+        width: 100%;
+        font-family: Roboto, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        color: black;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        color: black;
+      }
+      h2 span {
+        color: #1bbdc0;
+      }
+      p {
+        font-size: 15px;
+        line-height: 20px;
+        color: #555555;
+        text-align: center;
+        font-weight: 300;
+      }
+      a {
+        text-decoration: none;
+        color: #1cb1b4;
+      }
+      a:hover {
+        color: #1bbdc0;
+      }
+      .reason-container {
+        max-width: 410px;
+        margin: 0 auto 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <div class="container">
+        <h1>Welcome to Ahmed Store</h1>
+        <h2>Hello <span><%= name %></span></h2>
+        <div class="reason-container">
+          <p>We have blocked your account. The reason is:</p>
+          <p><%= reason %></p>
+        </div>
+        <hr />
+
+        <footer>
+          <p>
+            If you have any questions, please don't hesitate to contact us at:
+            <a href="mailto:akzero.supp@gmail.com">akzero.supp@gmail.com</a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

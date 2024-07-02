@@ -1,0 +1,61 @@
+<!-- activation_email.ejs -->
+
+<!DOCTYPE html>
+<html lang="ar">
+  <!-- added lang attribute -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رسالة من <%= name %></title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+      }
+      h2 {
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .text {
+        font-size: 15px;
+        line-height: 20px;
+        color: #555;
+        text-align: center;
+      }
+      .message-container {
+        padding: 10px;
+        background: #eee;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      a {
+        color: #1cb1b4;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #1bbdc0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>لديك رسالة جديدة من <%= name %></h2>
+      <p class="text">
+        <a href="mailto:<%= email %>"><%= email %></a> :الإيميل
+      </p>
+      <% if (phoneNumber) { %>
+      <p class="text">رقم التليفون: <span><%= phoneNumber %></span></p>
+      <% } %>
+      <p class="text">:الرسالة</p>
+      <div class="message-container">
+        <p class="text"><%= message %></p>
+      </div>
+    </div>
+  </body>
+</html>
